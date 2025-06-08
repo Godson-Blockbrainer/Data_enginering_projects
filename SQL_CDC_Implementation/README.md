@@ -10,14 +10,18 @@ This project implements an SQL-based CDC process to synchronize data between a s
 ## Goals 
 
 1:Identify Changes: Determine which records have been inserted, updated, or deleted between a staging (stg_student_engagement) and a target (target_table) table.
+
 2:  Efficient Data Sync: Minimize data transfer by only processing changes, which is essential for performance in large datasets.
-Data Integrity and Synchronization:
+
 3: Insert New Records: Add new entries from the staging table to the target table.
+
 4:  Update Changed Records: Modify records in the target table where changes have occurred.
+
 5: Delete Obsolete Records: Remove records from the target table that no longer exist in the staging table.
-Audit and Logging:
+
+
 6: Track Changes: Log the number of inserts, updates, and deletions for each run, helping in auditing and ensuring data integrity.
-Clean Up:
+
 7:  Prepare for Next Run: Clear the staging table to make room for new data imports, ensuring the process can repeat without old data interference.
 
 ## How It Works
