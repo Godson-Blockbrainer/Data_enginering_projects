@@ -1,4 +1,4 @@
-##SQL Change Data Capture Implementation
+SQL Change Data Capture Implementation
 
 Change Data Capture (CDC) is a data engineering technique that identifies and captures changes (inserts, updates, deletes) 
 in a database. It’s essential for keeping systems in sync efficiently without reloading entire datasets.
@@ -7,7 +7,7 @@ Project Overview
 This project implements an SQL-based CDC process to synchronize data between a staging table (e.g., stg_student_engagement) and a target table (e.g., target_table). It detects changes, applies them, logs operations, and cleans up for the next load.
 
 
-##How It Works
+How It Works
 
 1:Identify Changes: Compare staging and target tables to flag records as inserts, updates, or deletes.
 2: Apply Changes:
@@ -19,7 +19,7 @@ Delete obsolete records.
 3:Log Changes: Record operations in a control table.
 4:Clean Up: Clear the staging table.
 
-##Implementation Details
+Implementation Details
 The core is an SQL script (cdc_script.sql) that:
 
 -Creates a temporary cdc_table to stage changes with an Operation_flag.
@@ -31,13 +31,13 @@ The core is an SQL script (cdc_script.sql) that:
 
 View the SQL script
 
-#Usage
+Usage
 
 1: Ensure database access to the staging and target tables.
 2: Adjust table names in the script if necessary.
 3: Execute the script in your SQL environment.
 
-#Challenges and Solutions
+Challenges and Solutions
 
 .Challenge: Identifying unique records.
 .Solution: Combined id and specialization for a composite key.
