@@ -46,33 +46,21 @@ The core is an SQL script (cdc_script.sql) that:
 -Logs operations in a control table.
 -Truncates the staging table.
 
-## View the SQL script
 
-Usage
 
-1: Ensure database access to the staging and target tables.
-2: Adjust table names in the script if necessary.
-3: Execute the script in your SQL environment.
+## Challenges and Solutions
 
-Challenges and Solutions
-
-.Challenge: Identifying unique records.
+1:.Challenge: Identifying unique records.
 .Solution: Combined id and specialization for a composite key.
 
 
-Challenge: Detecting changes accurately.
+2: Challenge: Detecting changes accurately.
 Solution: Used EXCEPT DISTINCT for precise comparisons.
-
 
 
 Future Improvements
 
 Implement log-based CDC for real-time updates.
 Add error handling and transactions for robustness.
-
-References
-
-
-
 
 This is part of the Data Engineering Projects series.
